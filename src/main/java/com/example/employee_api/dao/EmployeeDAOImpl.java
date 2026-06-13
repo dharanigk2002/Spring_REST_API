@@ -20,7 +20,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
 
     @Override
-    public Employee findById(int id) {
+    public Employee findById(Integer id) {
         return entityManager.find(Employee.class, id);
     }
 
@@ -30,7 +30,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
 
     @Override
-    public void deleteById(int id) {
+    public void deleteById(Integer id) {
         Employee employee=findById(id);
         entityManager.remove(employee);
     }
